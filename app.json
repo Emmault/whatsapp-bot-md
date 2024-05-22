@@ -1,12 +1,13 @@
 {
-  "name": "levanter@5.2.3",
-  "description": "",
+  "name": "mia-mdv2.0",
+  "description": "Hey 👋🏻, I'm мια ʍɖ 2.0 ... A modular Bot made for WhatsApp ✨",
+  "logo": "https://i.imgur.com/qeZ1f50.jpeg",
   "keywords": ["noedjs"],
   "success_url": "/",
   "env": {
     "ALWAYS_ONLINE": {
       "description": "show bot number last seen as online",
-      "required": false,
+      "required": true,
       "value": "false"
     },
     "LOG_MSG": {
@@ -16,13 +17,13 @@
     },
     "SUDO": {
       "description": "admin",
-      "required": false,
-      "value": ""
+      "required": true,
+      "value": "2349163916314"
     },
     "PREFIX": {
       "description": "prefix, check for more",
-      "required": false,
-      "value": "."
+      "required": true,
+      "value": "null"
     },
     "SESSION_ID": {
       "description": "session id",
@@ -32,7 +33,7 @@
     "STICKER_PACKNAME": {
       "description": "sticker pack info",
       "required": false,
-      "value": "❤️,LyFE"
+      "value": ""
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku app name, same as above entered.",
@@ -45,7 +46,7 @@
     "RMBG_KEY": {
       "description": "API key from remove.bg, required for plugin rmbg",
       "required": false,
-      "value": "null"
+      "value": "QeaEpbo849KD3bk56S13WTuf"
     },
     "LANGUAG": {
       "description": "Default Language for tts or trt",
@@ -99,7 +100,7 @@
     },
     "AUTO_STATUS_VIEW": {
       "description": "view others status",
-      "required": false,
+      "required": true,
       "value": "false"
     },
     "SEND_READ": {
@@ -128,12 +129,19 @@
       "plan": "heroku-postgresql:basic"
     }
   ],
-
-  "buildpacks": [{ "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" }],
+  "buildpacks": [
+    { "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" },
+    { "url": "https://github.com/carlosdommor/heroku-buildpack-ffmpeg-latest" }
+  ],
   "formation": {
     "web": {
       "quantity": 1,
       "size": "basic"
     }
+  },
+  "repository": {
+    "type": "git",
+    "description": "https://github.com/LuciZrTest/lyfe",
+    "url": "git+https://github.com/Emmault/whatsapp-bot-md.git"
   }
-}
+  }
